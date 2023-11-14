@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clima.app</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- boostrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+<body class="bg-dark">
+    <header>
+        <!-- buscador  -->
+        <nav class="navbar bg-body-tertiary p-0">
+            <div class="container-fluid bg-black media d-flex">
+                <a class="navbar-brand" href=""><img src="img/LogoVersionClara.png" alt="ir a portafolio"
+                        style="width: 30px" /></a>
+                <div class="d-flex align-items-center">
+                    <input class="form-control me-2" id="search" placeholder="Lugar" style="height: 25px" />
+                    <button class="btn btn-outline-primary align-items-center d-flex" id="btn" type="submit"
+                        style="height: 25px">
+                        <i class="bi bi-search" style="font-size: 10px"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- parrafo en caso de error -->
+    <div id="parrafo" class="d-flex justify-content-center align-items-center" style="color: aliceblue">
+        <!-- este es el mensaje de error -->
+    </div>
+
+    <!-- imagen de fondo -->
+    <div class="justify-content-center flex-column d-flex"  id="eliminar">
+        <div class="justify-content-center d-flex">
+            <img src="img/Search.svg" width="500px">
+        </div>
+        <div class="text-center ">
+            <h1 id="carga" >Busca el clima que desees</h1>
+        </div>
+    </div>
+
+
+
+
+    <!-- carta principal -->
+    <div class="container d-flex justify-content-center " id="containerClima">
+        <!-- esta es la carta -->
+    </div>
+    <!-- datos generales -->
+    <h1  style="font-size: 10px" class=" oculto" id="titulo_1">
+        Datos generales :
+    </h1>
+    <div class="oculto" id="general">
+                    <!-- dato 1 -->
+                    <div class=" col-sm-12  d-flex align-items-center border rounded gap-3 mb-4 me-0 ms-3 ps-2"  style="width: 95%;">
+                        <img src="img/humedad.png" width="50px" height="50px">
+                        <div>
+                            <p>Humedad: <br>
+                            <span id="Humedad"></span>%
+                            </p>
+                        </div>
+                    </div>
+                    <!-- dato 1 -->
+                    <div class=" col-sm-12  d-flex align-items-center border rounded gap-3 mb-4 me-0 ms-3 ps-2"  style="width: 95%;">
+                        <img src="img/presion.png" width="50px" height="50px">
+                        <div>
+                            <p>Presion: <br>
+                            <span id="Presion"></span> hPa
+                            </p>
+                        </div>
+                    </div>
+                    <!-- dato 1 -->
+                    <div class=" col-sm-12  d-flex align-items-center border rounded gap-3 mb-4 me-0 ms-3 ps-2"  style="width: 95%;">
+                        <img src="img/viento.png" width="50px" height="50px">
+                        <div>
+                            <p>Viento: <br>
+                            <span id="Viento"></span> km/hr
+                            </p>
+                        </div>
+                    </div>
+                    <!-- dato 1 -->
+                    <div class=" col-sm-12  d-flex align-items-center border rounded gap-3 mb-4 me-0 ms-3 ps-2"  style="width: 95%;">
+                        <img src="img/termo.png" width="50px" height="50px">
+                        <div>
+                            <p>Sensacion termica: <br>
+                            <span id="Sensacion"></span>°
+                            </p>
+                        </div>
+                    </div>
+                    
+    </div>
+    <!-- slider de clima  -->
+    <div  >
+        <h1  style="font-size: 10px" class=" oculto" id="titulo_2">
+            Pronostico de mañana:
+        </h1>
+        <div  class="d-flex carrusel pe-2" id="containerHora">
+
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>

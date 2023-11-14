@@ -1,0 +1,82 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+/*Font import*/
+@font-face {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    src: url(PTSans/PTSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'PT Sans';
+    font-weight: bold;
+    src: url(PTSans/PTSans-Bold.ttf);
+}
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    src: url(PTSans/PTSans-Italic.ttf);
+} 
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 25px;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    border: 0px ;
+} 
+::-webkit-scrollbar-thumb {
+ background-color: black;
+ border-radius: 20px;
+ border:  solid black 2px;
+ height: 5px;
+
+}
+h1, p, h2 {
+    color: aliceblue!important;
+    font-size: 20px!important;
+}
+:root{
+    --blanco:white;
+    --fuentePrimaria: 'PT Sans';
+    --fuenteSecundaria: 'Open Sans';
+}
+.blanco{
+    color: var(--blanco);
+}
+/* contenido de las cartas */
+.principal_card{
+    border-bottom:1px solid white ;
+    padding: 5px 15px ;
+}
+.txt_card{
+    font-size: 15px;
+    margin: 0%;
+}
+.carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+.elemento{
+    flex: 1 0 auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.oculto{
+    display: none;
+}
+@media (max-width: 330px) {
+    .media{
+        padding: 0px 10px!important;
+        
+    }
+}
+@media (max-width: 450px) {
+    .media{
+        padding: 0px 10px!important;
+    }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
